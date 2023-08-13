@@ -36,9 +36,31 @@ public class Flag extends JApplet {
 
 	// paint() will be called every time a resizing of an applet occurs
 	public void paint(Graphics g) {
+        // Sets the width and height of the flag
+        double window_width = getWidth();
+        double window_height = getHeight();
+        if (window_width == 1.9*window_height){
+            flag_width = window_width;
+            flag_height = window_height;
+        }
+        else if (window_width < 1.9*window_height){
+            flag_width = window_width;
+            flag_height = window_width / 1.9;
+        }
+        else{
+            flag_width = window_height * 1.9;
+            flag_height = window_height;
+        }
+        stripe_height = flag_height / STRIPES;
+        drawBackground(g);
+        drawStripes(g);
+        drawField(g);
+        drawStars(g);
 	}
 
 	private void drawBackground(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.BLACK);
 	}
 	
 	public void drawStripes(Graphics g) {
