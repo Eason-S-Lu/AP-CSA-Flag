@@ -68,8 +68,14 @@ public class Flag extends JApplet {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(new Color(179, 25, 66));
 		g2d.fillRect(0, 0, (int) x, (int) y);
+		g2d.setColor(Color.WHITE);
+		//fill the white stripe
+		for (int i = 0; i < STRIPES; i++) {
+			if (i % 2 == 1) {
+				g2d.fillRect(0, (int) (i * stripe_height), (int) x, (int) stripe_height);
+			}
+		}
 	}
-
 	public void drawField(Graphics g) {
 	}
 
