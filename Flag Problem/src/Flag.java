@@ -36,14 +36,46 @@ public class Flag extends JApplet {
 
 	// paint() will be called every time a resizing of an applet occurs
 	public void paint(Graphics g) {
+        // Sets the width and height of the flag
+        double window_width = getWidth();
+        double window_height = getHeight();
+        if (window_width == 1.9*window_height){
+            flag_width = window_width;
+            flag_height = window_height;
+        }
+        else if (window_width < 1.9*window_height){
+            flag_width = window_width;
+            flag_height = window_width / 1.9;
+        }
+        else{
+            flag_width = window_height * 1.9;
+            flag_height = window_height;
+        }
+        stripe_height = flag_height / STRIPES;
+        drawBackground(g, window_width, window_height);
+        drawStripes(g, flag_width, flag_height);
+        drawField(g);
+        drawStars(g);
 	}
 
-	private void drawBackground(Graphics g) {
+	private void drawBackground(Graphics g, double x, double y) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setColor(Color.BLACK);
+		g2d.fillRect(0, 0, (int) x, (int) y);
 	}
 	
-	public void drawStripes(Graphics g) {
+	public void drawStripes(Graphics g, double x, double y) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setColor(new Color(179, 25, 66));
+		g2d.fillRect(0, 0, (int) x, (int) y);
+		g2d.setColor(Color.WHITE);
+		//fill the white stripe
+		for (int i = 0; i < STRIPES; i++) {
+			if (i % 2 == 1) {
+				g2d.fillRect(0, (int) (i * stripe_height), (int) x, (int) stripe_height);
+			}
+		}
 	}
-
 	public void drawField(Graphics g) {
 	}
 
