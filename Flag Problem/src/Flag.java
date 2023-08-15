@@ -1,6 +1,14 @@
 /*
+ *The code aims to draw a flag of USA
+ *
  *By Yicheng Lu
- */
+ *And
+ *Line 77 and 78 is written by github copilot
+ *Version control by git
+ *Online repo by github
+ *https://github.com/Eason-S-Lu/AP-CSA-Flag
+ *IDE by eclipse and VSCode
+*/
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -77,6 +85,9 @@ public class Flag extends JApplet {
 		}
 	}
 	public void drawField(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setColor(new Color(10, 49, 97));
+		g2d.fillRect(0, 0, (int) (flag_width*D/B), (int) (flag_height*7*L));
 	}
 
 	public void drawStars(Graphics g) {
