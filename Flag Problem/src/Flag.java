@@ -2,7 +2,7 @@
  *The code aims to draw a flag of USA
  *
  *By Yicheng Lu
- *And
+ *And Melody Lyu
  *Line 77 and 78 is written by github copilot
  *Version control by git
  *Online repo by github
@@ -99,9 +99,12 @@ public class Flag extends JApplet {
 		double ef=field_height/10;
 		double diameter=flag_width*K/B;
 		double radious=diameter/2;
+		double Radious=(Math.sin(Math.toRadians(18))*radious)/Math.sin(Math.toRadians(54));
 		for (int i = 0 ;i<5;i++){
 			for (int j = 0 ;j<6;j++){
-				g2d.fillOval((int)gh, (int)ef, 5, 5);
+				int Xcord[]= {(int)gh,(int)(gh+(Radious*Math.cos(Math.toRadians(54)))),(int)(gh+(radious*Math.cos(Math.toRadians(18)))),(int)(gh+(Radious*Math.cos(Math.toRadians(342)))),(int)(gh+(radious*Math.cos(Math.toRadians(306)))),(int)(gh+(Radious*Math.cos(Math.toRadians(270)))),(int)(gh+(radious*Math.cos(Math.toRadians(234)))),(int)(gh+(Radious*Math.cos(Math.toRadians(198)))),(int)(gh+(radious*Math.cos(Math.toRadians(162)))),(int)(gh+(Radious*Math.cos(Math.toRadians(126))))};
+				int Ycord[]={(int)((ef-radious)),(int)(ef-(Radious*Math.sin(Math.toRadians(54)))),(int)(ef-(radious*Math.sin(Math.toRadians(18)))),(int)(ef-(Radious*Math.sin(Math.toRadians(342)))),(int)(ef-(radious*Math.sin(Math.toRadians(306)))),(int)(ef-(Radious*Math.sin(Math.toRadians(270)))),(int)(ef-(radious*Math.sin(Math.toRadians(234)))),(int)(ef-(Radious*Math.sin(Math.toRadians(198)))),(int)(ef-(radious*Math.sin(Math.toRadians(162)))),(int)(ef-(Radious*Math.sin(Math.toRadians(126))))};
+				g2d.fillPolygon(Xcord, Ycord, 10);
 				gh=gh+2*(field_width/12);
 			}
 			gh=field_width/12;
@@ -111,7 +114,9 @@ public class Flag extends JApplet {
 		ef = 2*(field_height/10);
 		for (int i = 0 ;i<4;i++){
 			for (int j = 0 ;j<5;j++){
-				g2d.fillOval((int)gh, (int)ef, 5, 5);
+				int Xcord[]= {(int)gh,(int)(gh+(Radious*Math.cos(Math.toRadians(54)))),(int)(gh+(radious*Math.cos(Math.toRadians(18)))),(int)(gh+(Radious*Math.cos(Math.toRadians(342)))),(int)(gh+(radious*Math.cos(Math.toRadians(306)))),(int)(gh+(Radious*Math.cos(Math.toRadians(270)))),(int)(gh+(radious*Math.cos(Math.toRadians(234)))),(int)(gh+(Radious*Math.cos(Math.toRadians(198)))),(int)(gh+(radious*Math.cos(Math.toRadians(162)))),(int)(gh+(Radious*Math.cos(Math.toRadians(126))))};
+				int Ycord[]={(int)(ef-radious),(int)(ef-(Radious*Math.sin(Math.toRadians(54)))),(int)(ef-(radious*Math.sin(Math.toRadians(18)))),(int)(ef-(Radious*Math.sin(Math.toRadians(342)))),(int)(ef-(radious*Math.sin(Math.toRadians(306)))),(int)(ef-(Radious*Math.sin(Math.toRadians(270)))),(int)(ef-(radious*Math.sin(Math.toRadians(234)))),(int)(ef-(Radious*Math.sin(Math.toRadians(198)))),(int)(ef-(radious*Math.sin(Math.toRadians(162)))),(int)(ef-(Radious*Math.sin(Math.toRadians(126))))};
+				g2d.fillPolygon(Xcord, Ycord, 10);
 				gh=gh+2*(field_width/12);
 			}
 			gh=2*(field_width/12);
