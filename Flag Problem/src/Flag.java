@@ -91,5 +91,31 @@ public class Flag extends JApplet {
 	}
 
 	public void drawStars(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setColor(Color.WHITE);
+		double field_width = flag_width*D/B;
+		double field_height = flag_height*C;
+		double gh=field_width/12;
+		double ef=field_height/10;
+		double diameter=flag_width*K/B;
+		double radious=diameter/2;
+		for (int i = 0 ;i<5;i++){
+			for (int j = 0 ;j<6;j++){
+				g2d.fillOval((int)gh, (int)ef, 5, 5);
+				gh=gh+2*(field_width/12);
+			}
+			gh=field_width/12;
+			ef=ef+2*(field_height/10);
+		}
+		gh = 2*(field_width/12);
+		ef = 2*(field_height/10);
+		for (int i = 0 ;i<4;i++){
+			for (int j = 0 ;j<5;j++){
+				g2d.fillOval((int)gh, (int)ef, 5, 5);
+				gh=gh+2*(field_width/12);
+			}
+			gh=2*(field_width/12);
+			ef=ef+2*(field_height/10);
+		}
 	}
 }
