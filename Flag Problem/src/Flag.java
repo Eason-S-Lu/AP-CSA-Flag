@@ -103,7 +103,7 @@ public class Flag extends JApplet {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
                 int xCord[] = { (int) gh,
-			(int) (gh + (Radious * Math.cos(Math.toRadians(54)))),
+			            (int) (gh + (Radious * Math.cos(Math.toRadians(54)))),
                         (int) (gh + (radius * Math.cos(Math.toRadians(18)))),
                         (int) (gh + (Radious * Math.cos(Math.toRadians(342)))),
                         (int) (gh + (radius * Math.cos(Math.toRadians(306)))),
@@ -113,7 +113,7 @@ public class Flag extends JApplet {
                         (int) (gh + (radius * Math.cos(Math.toRadians(162)))),
                         (int) (gh + (Radious * Math.cos(Math.toRadians(126)))) };
                 int yCord[] = { (int) ((ef - radius)),
-			(int) (ef - (Radious * Math.sin(Math.toRadians(54)))),
+			            (int) (ef - (Radious * Math.sin(Math.toRadians(54)))),
                         (int) (ef - (radius * Math.sin(Math.toRadians(18)))),
                         (int) (ef - (Radious * Math.sin(Math.toRadians(342)))),
                         (int) (ef - (radius * Math.sin(Math.toRadians(306)))),
