@@ -93,7 +93,7 @@ public class Flag extends JApplet {
         double innerRadius = (Math.sin (Math.toRadians(18)) * outerRadius) / Math.sin (Math.toRadians(54));
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
-                star.draw(absGH, absEF, outerRadius, innerRadius, g2d);
+                star.draw(absGH, absEF, outerRadius, innerRadius, g);
                 absGH = absGH + 2 * (fieldWidth / 12);
             }
             absGH = fieldWidth / 12;
@@ -103,7 +103,7 @@ public class Flag extends JApplet {
         absEF = 2 * (fieldHeight / 10);
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                star.draw(absGH, absEF, outerRadius, innerRadius, g2d);
+                star.draw(absGH, absEF, outerRadius, innerRadius, g);
                 absGH = absGH + 2 * (fieldWidth / 12);
             }
             absGH = 2 * (fieldWidth / 12);
