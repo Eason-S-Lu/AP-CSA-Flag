@@ -77,7 +77,7 @@ public class Flag extends JApplet {
 	public void drawField(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(new Color(10, 49, 97));
-        g2d.fillRect(0, 0, (int) Math.round(flag_width / B * C), (int) Math.round(flag_height / A * D));
+        g2d.fillRect(0, 0, (int) Math.round(flag_width / B * D), (int) Math.round(flag_height / A * C));
 	}
 
 	public void drawStars(Graphics g) {
