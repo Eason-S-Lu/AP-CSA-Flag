@@ -86,8 +86,29 @@ public class Flag extends JApplet {
         g2d.setColor(Color.WHITE);
         double fieldWidth = flag_width / B * D;
         double fieldHeight = flag_height / A * C;
-        double absgh = fieldWidth / 12;
-        double absef = fieldHeight / 10;
+        double absGH = fieldWidth / 12;
+        double absEF = fieldHeight / 10;
+        double absDiameter = fieldHeight / B * K;
+        double outerRadius = absDiameter / 2;
+        double innerRadius = (Math.sin (Math.toRadians(18)) * outerRadius) / Math.sin (Math.toRadians(54));
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 6; j++) {
+                star.draw(absGH, absEF, outerRadius, innerRadius, g2d);
+                absGH = absGH + 2 * (fieldWidth / 12);
+            }
+            absGH = fieldWidth / 12;
+            absEF = absEF + 2 * (fieldHeight / 10);
+        }
+        absGH = 2 * (fieldWidth / 12);
+        absEF = 2 * (fieldHeight / 10);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                star.draw(absGH, absEF, outerRadius, innerRadius, g2d);
+                absGH = absGH + 2 * (fieldWidth / 12);
+            }
+            absGH = 2 * (fieldWidth / 12);
+            absEF = absEF + 2 * (fieldHeight / 10);
+        }
 	}
 }
  
