@@ -51,7 +51,7 @@ public class Flag extends JApplet {
         }
         stripe_height = flag_height / STRIPES;
         drawBackground(g, screenWidth, screenHeight);
-        drawStripes(g, flag_width, flag_height, stripe_height);
+        drawStripes(g, stripe_height);
         drawField(g);
         drawStars(g);
 	}
@@ -62,7 +62,7 @@ public class Flag extends JApplet {
         g2.fillRect(0, 0, (int) Math.round(screenWidth), (int) Math.round(screenHeight));
 	}
 	
-	public void drawStripes(Graphics g, double flag_width, double flag_height, double stripeHeight) {
+	public void drawStripes(Graphics g, double stripeHeight) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(new Color(179, 25, 66));
         g2d.fillRect(0, 0, (int) Math.round(flag_width), (int) Math.round(flag_height));
@@ -75,6 +75,9 @@ public class Flag extends JApplet {
 	}
 
 	public void drawField(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(new Color(10, 49, 97));
+        g2d.fillRect(0, 0, (int) Math.round(flag_width / B * C), (int) Math.round(flag_height / A * D));
 	}
 
 	public void drawStars(Graphics g) {
