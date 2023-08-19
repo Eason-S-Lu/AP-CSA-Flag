@@ -59,17 +59,17 @@ public class Flag extends JApplet {
 	private void drawBackground(Graphics g, double screenWidth, double screenHeight) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.BLACK);
-        g2.fillRect(0, 0, (int)screenWidth, (int)screenHeight);
+        g2.fillRect(0, 0, (int) Math.round(screenWidth), (int) Math.round(screenHeight));
 	}
 	
 	public void drawStripes(Graphics g, double flag_width, double flag_height, double stripeHeight) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(new Color(179, 25, 66));
-        g2d.fillRect(0, 0, (int) flag_width, (int) flag_height);
+        g2d.fillRect(0, 0, (int) Math.round(flag_width), (int) Math.round(flag_height));
         g2d.setColor(Color.WHITE);
         for (int i = 0; i < STRIPES; i++) {
             if (i % 2 == 1) {
-                g2d.fillRect(0, (int) (i * stripeHeight), (int) flag_width, (int) stripeHeight);
+                g2d.fillRect(0, (int) Math.round(i * stripeHeight), (int) Math.round(flag_width), (int) Math.round(stripeHeight));
             }
         }
 	}
