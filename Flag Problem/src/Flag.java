@@ -57,9 +57,9 @@ public class Flag extends JApplet {
 	}
 
 	private void drawBackground(Graphics g, double screenWidth, double screenHeight) {
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setColor(Color.BLACK);
-        g2.fillRect(0, 0, (int) Math.round(screenWidth), (int) Math.round(screenHeight));
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.BLACK);
+        g2d.fillRect(0, 0, (int) Math.round(screenWidth), (int) Math.round(screenHeight));
 	}
 	
 	public void drawStripes(Graphics g, double stripeHeight) {
