@@ -82,6 +82,12 @@ public class Flag extends JApplet {
 
 	public void drawStars(Graphics g) {
         Star star = new Star();
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.WHITE);
+        double fieldWidth = flag_width / B * D;
+        double fieldHeight = flag_height / A * C;
+        double absgh = fieldWidth / 12;
+        double absef = fieldHeight / 10;
 	}
 }
  
