@@ -81,6 +81,7 @@ public class Flag extends JApplet {
 	}
 
 	public void drawStars(Graphics g) {
+        Star star = new Star();
 	}
 }
  
