@@ -1,8 +1,8 @@
 import java.awt.Graphics;
-public class Star extends Flag{
+public class Star{
 	int xcord[] = new int[10];
 	int ycord[] = new int[10];
-	public void draw(double xoffset, double yoffset, double outerRadius, double innerRadius, Graphics g2d){
+	public void draw(double xoffset, double yoffset, double outerRadius, double innerRadius, Graphics g){
 		int i = 0;
 		for (int deg = 18 ; deg <=360 ; deg += 36){
 			if (i%2 == 0){
