@@ -88,7 +88,7 @@ public class Flag extends JApplet {
         double fieldHeight = flag_height / A * C;
         double absGH = fieldWidth / 12;
         double absEF = fieldHeight / 10;
-        double absDiameter = fieldHeight / B * K;
+        double absDiameter = flag_width / B * K;
         double outerRadius = absDiameter / 2;
         double innerRadius = (Math.sin (Math.toRadians(18)) * outerRadius) / Math.sin (Math.toRadians(54));
         for (int i = 0; i < 5; i++) {
@@ -111,4 +111,3 @@ public class Flag extends JApplet {
         }
 	}
 }
- 
