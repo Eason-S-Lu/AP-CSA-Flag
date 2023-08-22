@@ -2,7 +2,6 @@
  * By Eason Lu
  * And Meldoy Lyu
  */
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;

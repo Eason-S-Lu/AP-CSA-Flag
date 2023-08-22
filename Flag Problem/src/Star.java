@@ -1,3 +1,7 @@
+/*
+ * By Eason Lu
+ * And Meldoy Lyu
+ */
 import java.awt.Graphics;
 public class Star{
 	int xcord[] = new int[10];
